@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 
 // connect to db
-const mongoUri = 'mongodb+srv://admin:passwordpassword@itclinic-u1gma.mongodb.net/test?retryWrites=true&w=majority';
+const mongoUri = 'mongodb+srv://admin:passwordpassword@itclinic-u1gma.mongodb.net/RN-map-tracking?retryWrites=true&w=majority';
 mongoose.connect(mongoUri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 mongoose.connection.on('connected', () =>  {
   console.log('connected to mongo instance');
