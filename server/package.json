@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "map-tracking-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,5 +9,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.28",
     "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js"
   }
 }
