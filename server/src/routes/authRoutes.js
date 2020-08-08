@@ -7,10 +7,14 @@ const router = express.Router();
 router.post('/signup', async (req,  res) => {
   const { email, password } = req.body;
 
-  const user = new User({ email, password });
-  await user.save();
-  
-  res.send('you made a post request')
+  try {
+    const user = new User({ email, password });
+    await user.save();
+    
+    res.send({ message: 'successful signup!' });
+  } catch (error) {
+    res.status(422).send({ message: error.message });
+  }
 });
 
 module.exports = router;
