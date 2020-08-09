@@ -12,5 +12,8 @@
   },
   "scripts": {
     "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
