@@ -4,8 +4,8 @@ import { Text, Input, Button } from 'react-native-elements';
 import Spacer from '../components/Spacer';
 
 export default function SignupScreen({ navigation }) {
-  const [formData, setFormData] = useState({ email: '', password: '' });
-  const onChange = key => text => setFormData({ ...formData, [key]: text });
+  const [credentials, setCredentials] = useState({ email: '', password: '' });
+  const onChange = key => text => setCredentials({ ...credentials, [key]: text });
 
   return (
     <View style={styles.container}>
@@ -15,7 +15,7 @@ export default function SignupScreen({ navigation }) {
       <Spacer>
         <Input
           label='Email'
-          value={formData.email}
+          value={credentials.email}
           onChangeText={onChange('email')}
           autoCapitalize='none'
           autoCorrect={false}
@@ -25,7 +25,7 @@ export default function SignupScreen({ navigation }) {
         <Input
           secureTextEntry
           label='Password'
-          value={formData.password}
+          value={credentials.password}
           onChangeText={onChange('password')}
           autoCapitalize='none'
           autoCorrect={false}
