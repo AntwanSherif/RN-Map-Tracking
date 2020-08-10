@@ -7,7 +7,7 @@ export default function App () {
 	return (
 		<View style={styles.container}>
 			<StatusBar style='auto' />
-			<MainNavigator isSignedIn={true} />
+			<MainNavigator isSignedIn={false} />
 		</View>
 	);
 }
